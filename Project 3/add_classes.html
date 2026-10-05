@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a class</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="static.css">
+</head>
+<body>
+
+<!-- Header including page logo and account information -->
+<header class="header">
+    <div class="logo">
+        <span><a id="logo-txt" href="index.html">|SPLMS|</a></span>
+    </div>
+ <div class="profile">
+        <!-- Image source : Unsplash, https://unsplash.com/photos/bright-white-sun-in-orange-sky-i4QIqfcTkN8 -->
+        <img class="profile-pic" src="sun.jpg" alt="a very bright yellow sun in a yellow sky">
+        <span>Account</span>
+        <span aria-hidden="true">▼</span>
+    </div>
+</header>
+
+
+<!-- Main Navigation Bar across all pages -->
+<nav class="main-nav" aria-label="Primary Navigation Bar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="classes.html">Classes</a></li>
+        <li><a href="#">Notices</a></li>
+        <li><a href="#">Lesson Plans</a></li>
+    </ul>
+</nav>
+
+<!-- Breadcrumbs for easier navigation -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <p><a href="index.html">Home</a> > <a href="classes.html">All Classes</a> > <a href="add_classes.html"> Add a class </a></p>
+</nav>
+
+<!-- Main Content Area -->
+<main>
+
+    <h1 class="page-title">Add a Class</h1>
+
+<!-- Form for creating a new class -->
+    <form class="form-container container">
+        <div class="form-section">
+            <label for="course-name">Course Name *</label>
+            <input type="text" placeholder="Social Studies" name="course-name" id="course-name" required>
+        </div>
+
+        <div class="form-section">
+            <label for="grade">Grade *</label>
+            <select id="grade" name="grade" required>
+                <option value="">Select a grade</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="class-section">Section *</label>
+            <select id="class-section" name="class-section" required>
+                <option value="">Select a section</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="course-description">Course Description</label>
+            <textarea placeholder="Write a short description.." name="course-description" id="course-description"></textarea>
+        </div>
+
+        <div class="form-btn-container">
+            <button type="button" class="form-btn cancel-btn" name="cancel-btn">Cancel</button>
+            <button type="submit" class="form-btn" name="create-class">Create Class</button>
+        </div>
+
+    </form>
+
+</main>
+
+<!-- Shared Footer across all pages -->
+<footer class="footer">
+    <p>&copy; 2026 SPLMS</p>
+    <p> | </p>
+    <p><a href="#"> About</a></p>
+    <p> | </p>
+    <p><a href="#"> Contact Us</a></p>
+    <p> | </p>
+    <p><a href="#">Help</a></p>
+</footer>
+
+</body>
+</html>
