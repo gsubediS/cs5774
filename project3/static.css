@@ -1,0 +1,477 @@
+/* Global base styles*/
+*{
+box-sizing: border-box;
+}
+
+img{
+max-width: 100%;
+height:auto;
+}
+
+html,body{
+    height: 100%
+}
+
+body{
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    min-height: 100vh;
+    background: #F1F1F1;
+}
+
+header{
+    display: flex;
+    justify-content : space-between;
+    align-items:center;
+    background : #30332E;
+    padding: 10px 10px;
+    color:white;
+}
+
+header a {
+    text-decoration:none;
+    color : white
+}
+
+h1{
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+h3{
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+a{
+    color:black;
+}
+
+
+footer a{
+    color: white;
+}
+
+footer{
+    color: white;
+    display: flex;
+    justify-content : center;
+    background : #30332E;
+    padding: 0px 5px;
+    margin-top : auto;
+}
+
+main{
+    flex:1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header span{
+    margin: 0px;
+}
+
+/* focus states for accessibility*/
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+outline : 1px solid black;
+outline-offset: 2px;
+}
+
+/* Global shared elements - styling consistency */
+.profile{
+display:flex;
+align-items:center;
+gap: 6px;
+font-size:12px;
+}
+
+.profile span{
+    margin:0
+}
+
+.profile-pic{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+object-fit:cover;
+}
+
+.main-nav a.active{
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+
+.main-nav ul{
+    margin: auto;
+    display: flex;
+    justify-content : space-between;
+    padding: 18px 30px;
+    background : #e09f3e;
+    list-style: none;
+    border-radius: 5px;
+    width :90%;
+    max-width : 800px;
+    margin-top : 20px;
+}
+
+.main-nav li:hover{
+    background : white;
+}
+
+.breadcrumbs{
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5px auto;
+    padding: 0px 5px;
+    margin-top: 15px;
+}
+
+.breadcrumb-placeholder{
+    height: 24px;
+}
+
+#logo-txt{
+    color: #e09f3e;
+}
+
+.main-nav a{
+    text-decoration:none;
+    color : black
+}
+
+.page-title{
+margin: 10px 0 25px;
+text-shadow: 2px 3px  #e09f3e;
+}
+
+.btn{
+    display: inline-block;
+    width:fit-content;
+    background:#e09f3e;
+    padding: 4px 3px;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus{
+text-decoration:underline;
+}
+
+
+.container a:hover,
+.container a:focus{
+    text-decoration:underline;
+}
+
+.container{
+   display:block;
+   width: 100%;
+   background: #dad7cd;
+   padding: 15px;
+   margin: 10px 0px;
+   border: 1px solid black;
+   box-shadow: 2px 3px  #e09f3e;
+   border-radius: 5px;
+}
+
+.container a{
+text-decoration: none;
+}
+
+.class-container a{
+    color: black;
+    text-decoration : none;
+}
+
+.class-container a:hover,
+.class-container a:focus{
+    text-decoration:underline;
+}
+
+.class-container ul{
+    list-style: none;
+    padding:0px;
+}
+
+
+/*Home Page Styling*/
+
+.header-left{
+display:flex;
+align-items: center;
+gap: 30px;
+}
+
+.search-btn{
+border-radius: 5px;
+padding: 2px;
+}
+
+.search-bar input{
+border:none;
+border-radius: 5px;
+padding:5px;
+}
+
+.home-page{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas:
+"title title"
+"classes notices"
+"classes calendar";
+gap:15px;
+align-content: start;
+}
+
+.home-page .page-title{
+grid-area:title;
+}
+
+#classes-section{
+grid-area:classes;
+}
+
+#notices{
+grid-area:notices;
+}
+
+#calendar{
+grid-area:calendar;
+}
+
+#view-btn{
+    display: inline-flex;
+    width: fit-content;
+    justify-content: center;
+    margin-top:25px;
+}
+
+
+.notices-header{
+display:flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+#add-notice-btn{
+border:none;
+cursor:pointer
+}
+
+.classes-header{
+display:flex;
+flex-direction:column;
+height: 90%;
+padding: 15px;
+}
+
+/* Search results page styling */
+.search-result-item{
+padding: 12px 5px;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+}
+
+.search-result-item h3{
+text-decoration:underline;
+}
+
+/* Create Class page styling */
+
+.form-container{
+    width: 100%;
+    max-width: 800px;
+    margin-left: 10px;
+}
+
+.form-section{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea{
+    width : 100%;
+    max-width: 400px;
+    min-height: 30px;
+}
+
+.form-section textarea{
+    border: 1px solid black;
+    box-shadow: 2px 3px 2px  #e09f3e;
+}
+
+.form-section label{
+    padding: 10px 0px;
+}
+
+.form-btn-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-btn{
+    display:inline-flex;
+    width:fit-content;
+    min-width: 100px;
+    background:#e09f3e;
+    padding: 6px 3px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.favourite-btn{
+border:none;
+background:none;
+cursor:pointer;
+font-size: 1.2rem;
+width: 24px;
+padding:0;
+}
+
+.fav-alert-text{
+font-size: 0.8rem;
+color:green;
+}
+
+.unfav-alert-text{
+font-size: 0.8rem;
+color:red;
+}
+
+.cancel-btn{
+    background:#d88180;
+}
+
+/* Student Home page styling*/
+
+.quick-access{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0;
+}
+
+/* Course Detail page styling */
+
+.course-main{
+    display:flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.course-content{
+flex: 1;
+}
+
+.course-info{
+display:flex;
+gap:20px;
+}
+
+.course-info .container{
+flex:1;
+}
+
+.course-nav{
+flex: 0 0 180px;
+margin-top: 55px;
+}
+
+.course-nav ul{
+display:block;
+width:auto;
+list-style:none;
+padding: 0;
+margin: 0;
+border-radius: 0;
+}
+
+.course-nav li{
+margin: 0;
+}
+
+
+.course-nav a{
+display:block;
+padding:10px;
+background:#dad7cd;
+color:black;
+margin-bottom: 4px;
+text-decoration:none;
+}
+
+.course-nav a:hover{
+    text-decoration:underline;
+}
+
+
+.course-img{
+width: 100%;
+max-width:1000px;
+height:220px;
+object-fit:cover;
+}
+
+
+/* Responsive Design elements*/
+@media (max-width: 768px) {
+
+.main-nav ul{
+    flex-direction: column;
+}
+
+.home-page{
+grid-template-columns:1fr;
+grid-template-areas:
+"title"
+"classes"
+"notices"
+"calendar";
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea{
+    max-width: none;
+}
+
+.course-main{
+    flex-direction:column;
+}
+
+.course-nav{
+    width: 100%;
+    flex:none;
+    margin-top:0;
+    }
+
+.course-info{
+    flex-direction:column;
+}
+}

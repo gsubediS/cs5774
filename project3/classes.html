@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="static.css">
+</head>
+<body>
+
+<!-- Header including page logo and account information -->
+<header class="header">
+    <div class="logo">
+        <span><a id="logo-txt" href="index.html">|SPLMS|</a> </span>
+    </div>
+
+<div class="profile">
+        <!-- Image source : Unsplash, https://unsplash.com/photos/bright-white-sun-in-orange-sky-i4QIqfcTkN8 -->
+        <img class="profile-pic" src="sun.jpg" alt="a very bright yellow sun in a yellow sky">
+        <span>Account</span>
+        <span aria-hidden="true">▼</span>
+    </div>
+</header>
+
+<!-- Main Navigation Bar across all pages -->
+<nav class="main-nav" aria-label="Primary Navigation Bar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="classes.html">Classes</a></li>
+        <li><a href="#">Notices</a></li>
+        <li><a href="#">Lesson Plans</a></li>
+    </ul>
+</nav>
+
+<!-- Breadcrumbs for easier navigation -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <p><a href="index.html">Home</a> > <a href="classes.html">All Classes</a></p>
+</nav>
+
+
+<!-- Main Content Area -->
+<main>
+    <h1 class="page-title">All Classes</h1>
+
+<!-- List of all Courses taught by the Instructor -->
+    <div class="class-container">
+        <a class="btn" id="add_btn" href="add_classes.html"> + Add a class </a>
+        <ul id="class-list">
+            <li class="container"><a href="course_home.html">Grade 5A : Social Studies </a>
+            <button type="button" class="favourite-btn">☆</button>
+            </li>
+            <li class="container"><a href="#">Grade 7B : HPE </a>
+            <button type="button" class="favourite-btn">☆</button></li>
+            <li class="container"><a href="#">Grade 8C: Social Studies</a>
+            <button type="button" class="favourite-btn">☆</button></li>
+        </ul>
+    </div>
+</main>
+
+
+<!-- Shared Footer across all pages -->
+<footer class="footer">
+    <p>&copy; 2026 SPLMS</p>
+    <p> | </p>
+    <p><a href="#"> About</a></p>
+    <p> | </p>
+    <p><a href="#"> Contact Us</a></p>
+    <p> | </p>
+    <p><a href="#">Help</a></p>
+</footer>
+
+</body>
+</html>
